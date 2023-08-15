@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name ="apple-mobile-web-app-capable" content="yes" />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Google</title>
-  </head>
+<html>
+	<link rel="stylesheet" href="style.css"></link>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+	<title>
+		google
+	</title>
+</head>
+  <div id="placeholder"></div>
+
+<body>
+	
+	<script>
+if (("standalone" in window.navigator) &&       // Check if "standalone" property exists
+    window.navigator.standalone){               // Test if using standalone navigator
+var a = document.createElement('iframe');
+a.src = "https://gameguy101.github.io/"; //add your iframe path here
+
+document.querySelector('body').appendChild(a)
+    // Web page is loaded via app mode (full-screen mode)
+    // (window.navigator.standalone is TRUE if user accesses website via App Mode)
+
+} else {
+document.write("Add to home screen to use. click share button then add to homescreen.");
+    // Web page is loaded via standard Safari mode
+
+
+
+}
+	</script>
+</body>
   <style>
     * {
       margin: 0;
@@ -15,10 +39,11 @@
 
     body {
       overflow: hidden;
-      background: #000;
+      
     }
 
     iframe {
+      border: none;
       width: 100vw;
       height: 100vh;
       overflow: hidden;
@@ -27,23 +52,9 @@
     h1 {
       color: blue;
     }
+       .fullScreen {
+      width: 100vw;
+      height: 100vh;
+   }
   </style>
-  <body>
-    <iframe src="https://iceman3.github.io/games" frameborder="0" scrolling="yes" allowfullscreen="true"></iframe>
-  </body>
-  	<script>
-if (("standalone" in window.navigator) &&       // Check if "standalone" property exists
-    window.navigator.standalone){               // Test if using standalone navigator
-
-    // Web page is loaded via app mode (full-screen mode)
-    // (window.navigator.standalone is TRUE if user accesses website via App Mode)
-
-} else {
-window.location.replace("inst.html");
-    // Web page is loaded via standard Safari mode
-
-
-
-}
-	</script>
 </html>
